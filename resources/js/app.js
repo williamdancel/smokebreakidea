@@ -1,12 +1,8 @@
 import './bootstrap';
 import { createApp } from 'vue';
+import router from './router/index.js';
+import App from './Components/App.vue';
 
-// Import your Vue components
-import HomeComponent from './components/HomeComponent.vue';
-
-const app = createApp({});
-
-// Register components
-app.component('home-component', HomeComponent);
-
+const app = createApp(App);
+app.use(router);
 app.mount('#app');
